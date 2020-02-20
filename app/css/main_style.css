@@ -38,13 +38,20 @@ body {
   background-size: cover;
   background-position: center;
   flex-wrap: nowrap; }
+  .section-main img {
+    margin: 15px; }
   .section-main .pink-button {
-    margin: 15px 0px 0px 0px; }
+    margin: 15px 0 0 0; }
+  .section-main img:hover {
+    opacity: 0.3; }
 
 .section-2 {
   position: relative;
   background-color: #ececec; }
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
+    .section-2 {
+      height: 80vh; } }
+  @media (min-width: 1200px) {
     .section-2 {
       height: 650px; } }
   .section-2 .triangle {
@@ -54,25 +61,29 @@ body {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 0 650px 650px;
+    border-width: 0 0 650px 600px;
     border-color: transparent transparent #fb8686 transparent;
     display: none; }
-    @media (min-width: 800px) {
+    @media (min-width: 1200px) {
       .section-2 .triangle {
         display: block; } }
   .section-2 .new-design {
     z-index: 10;
     background-color: white;
     height: 100%;
-    padding: 5% 15% 5% 5%; }
+    padding: 0 15% 0 5%; }
     @media (max-width: 800px) {
       .section-2 .new-design {
         text-align: center;
-        padding: 5%; } }
-    @media (min-width: 800px) {
+        padding: 5% 10% 5% 10%; } }
+    @media (min-width: 1200px) {
       .section-2 .new-design {
         margin: 0 40% 0 0;
-        padding: 0% 10%; } }
+        padding: 0 10%; } }
+    .section-2 .new-design div {
+      padding: 10px 0; }
+    .section-2 .new-design .pink {
+      margin: 10px 0 2px 0; }
 
 .pad {
   padding: 0 15% 0 5%; }
@@ -81,13 +92,13 @@ body {
       padding: 0 10%; } }
 
 .headline-main {
-  font-size: 2em;
+  font-size: 2.5em;
   width: 90%;
   text-align: center;
   margin: 10px 0px; }
   @media (min-width: 600px) {
     .headline-main {
-      font-size: 3em;
+      font-size: 4em;
       width: 50%; } }
 
 .exo-thin-font {
@@ -131,13 +142,20 @@ body {
   margin: 0; }
   @media (min-width: 600px) {
     .mid-header {
-      font-size: 2em; } }
+      font-size: 2.5em; } }
 
 .section-3 {
   background-image: url("../images/BG.png");
   background-size: cover;
   background-position: center; }
-  @media (min-width: 600px) {
+  .section-3 .headers {
+    margin: 0; }
+    @media (min-width: 800px) {
+      .section-3 .headers {
+        margin: 0 7%; } }
+  .section-3 .pink {
+    margin: 10px 0 2px 0; }
+  @media (min-width: 800px) {
     .section-3 {
       height: 650px; } }
   .section-3 .container-row {
@@ -147,6 +165,11 @@ body {
         padding: 0; } }
   .section-3 .mid-header {
     text-align: center; }
+  .section-3 .marg {
+    margin: 5% 10%; }
+    @media (min-width: 800px) {
+      .section-3 .marg {
+        margin: 0 5%; } }
 
 @media (max-width: 800px) {
   .mobile-padding {
@@ -154,7 +177,7 @@ body {
 
 .section-4 {
   position: relative; }
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     .section-4 {
       height: 650px; } }
   @media (max-width: 800px) {
@@ -167,7 +190,7 @@ body {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 100vh 0 0 50vw;
+    border-width: 100vh 0 0 40vw;
     border-color: transparent transparent transparent #fb8686;
     z-index: -10; }
     @media (max-width: 800px) {
@@ -179,37 +202,62 @@ body {
     align-self: center;
     margin: auto;
     padding: 20px 0 0 0; }
-    @media (min-width: 700px) {
-      .section-4 .macbook {
-        height: 250px;
-        padding: 0; } }
     @media (min-width: 800px) {
       .section-4 .macbook {
+        height: 200px;
+        padding: 0;
+        margin: 0 7%; } }
+    @media (min-width: 900px) {
+      .section-4 .macbook {
         height: 300px;
+        padding: 0;
+        margin: 0 7%; } }
+    @media (min-width: 1100px) {
+      .section-4 .macbook {
+        height: 400px;
         padding: 0; } }
   .section-4 .new-design {
-    height: 100%;
-    padding: 0 15% 5% 5%; }
+    height: 100%; }
     @media (max-width: 800px) {
       .section-4 .new-design {
         text-align: center;
-        padding: 5%; } }
+        margin: 2% 10%; } }
     @media (min-width: 800px) {
       .section-4 .new-design {
-        padding: 0% 10%; } }
+        padding: 0 8% 0 0; } }
+
+.name {
+  color: white;
+  font-size: 1.2em;
+  padding: 0;
+  margin: 15px 0 0 0; }
+
+.profession {
+  font-size: 0.8em;
+  padding: 0;
+  margin: 0 0 20px 0; }
 
 .section-5 {
   background-image: url("../images/bg_clients.png");
   background-size: cover;
   background-position: center; }
-  @media (min-width: 600px) {
+  .section-5 .marg {
+    margin: 5% 5%; }
+    @media (min-width: 800px) {
+      .section-5 .marg {
+        margin: 0 5%; } }
+  @media (min-width: 800px) {
     .section-5 {
       height: 650px; } }
   .section-5 .container-row {
+    margin: 0;
     padding: 0 50px; }
     @media (min-width: 800px) {
       .section-5 .container-row {
+        margin: 2% 7%;
         padding: 0; } }
+  .section-5 .logos img {
+    margin: 0 30px; }
 
 .marg {
   margin: 3%;
@@ -222,7 +270,8 @@ body {
   margin: 20px; }
 
 .section-6 {
-  background: #f6f5f3; }
+  background: #f6f5f3;
+  padding: 5% 0 0 0; }
   .section-6 .marg {
     padding: 0 15%; }
   .section-6 .mid-header {
@@ -307,6 +356,10 @@ body {
   grid-template-columns: 3fr 2fr 2fr 2fr;
   grid-column-gap: 50px;
   padding: 40px 150px 40px 30px; }
+  @media (max-width: 800px) {
+    .section-footer {
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 30px; } }
   @media (max-width: 600px) {
     .section-footer {
       grid-template-columns: 1fr;
@@ -364,3 +417,9 @@ body {
   display: flex; }
   .footer-links img {
     margin: 8px 10px; }
+
+button:hover {
+  opacity: 0.9; }
+
+a {
+  text-decoration: none; }

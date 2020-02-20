@@ -29,7 +29,6 @@ body {
 }
 
 .section {
-
   & .container-row {
     flex-wrap: wrap;
     @media (min-width: 800px) {
@@ -50,15 +49,28 @@ body {
   background-position: center;
   flex-wrap: nowrap;
 
+  img{
+    margin: 15px;
+  }
+
   & .pink-button {
-    margin: 15px 0px 0px 0px;
+    margin: 15px 0 0 0;
+  }
+
+  img:hover{
+    opacity: 0.3;
   }
 }
 
 .section-2 {
   position: relative;
   background-color: #ececec;
-  @media (min-width: 600px) {
+
+  @media (min-width: 800px) {
+    height: 80vh;
+  }
+
+  @media (min-width: 1200px) {
     height: 650px;
   }
 
@@ -69,10 +81,10 @@ body {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 0 650px 650px;
+    border-width: 0 0 650px 600px;
     border-color: transparent transparent #fb8686 transparent;
     display: none;
-    @media (min-width: 800px) {
+    @media (min-width: 1200px) {
       display: block;
     }
   }
@@ -81,14 +93,24 @@ body {
     z-index: 10;
     background-color: white;
     height: 100%;
-    padding: 5% 15% 5% 5%;
+    padding: 0 15% 0 5%;
+
     @media (max-width: 800px) {
       text-align: center;
-      padding: 5%;
+      padding: 5% 10% 5% 10%;
     }
-    @media (min-width: 800px) {
+
+    @media (min-width: 1200px) {
       margin: 0 40% 0 0;
-      padding: 0% 10%;
+      padding: 0 10%;
+    }
+
+    div{
+      padding: 10px 0;
+    }
+
+    .pink{
+      margin: 10px 0 2px 0;
     }
   }
 }
@@ -101,13 +123,13 @@ body {
 }
 
 .headline-main {
-  font-size: 2em;
+  font-size: 2.5em;
   width: 90%;
   text-align: center;
   margin: 10px 0px;
 
   @media (min-width: 600px) {
-    font-size: 3em;
+    font-size: 4em;
     width: 50%
   }
 }
@@ -162,15 +184,26 @@ body {
   padding: 0 0 5% 0;
   margin: 0;
   @media (min-width: 600px) {
-    font-size: 2em;
+    font-size: 2.5em;
   }
 }
 
 .section-3 {
+  & .headers{
+    @media (min-width: 800px) {
+      margin: 0 7%;
+    }
+    margin: 0;
+  }
+
+  .pink{
+    margin: 10px 0 2px 0;
+  }
+
   background-image: url("../images/BG.png");
   background-size: cover;
   background-position: center;
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     height: 650px;
   }
 
@@ -184,6 +217,14 @@ body {
   & .mid-header {
     text-align: center;
   }
+
+  & .marg{
+    @media (min-width: 800px) {
+      margin: 0 5%;
+    }
+
+    margin: 5% 10%;
+  }
 }
 
 .mobile-padding {
@@ -193,8 +234,10 @@ body {
 }
 
 .section-4 {
+
   position: relative;
-  @media (min-width: 600px) {
+
+  @media (min-width: 800px) {
     height: 650px;
   }
   @media (max-width: 800px) {
@@ -208,7 +251,7 @@ body {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 100vh 0 0 50vw;
+    border-width: 100vh 0 0 40vw;
     border-color: transparent transparent transparent #fb8686;
     z-index: -10;
 
@@ -224,42 +267,81 @@ body {
     margin: auto;
     padding: 20px 0 0 0;
 
-    @media (min-width: 700px) {
-      height: 250px;
+    @media (min-width: 800px) {
+      height: 200px;
       padding: 0;
+      margin: 0 7%;
     }
 
-    @media (min-width: 800px) {
+    @media (min-width: 900px) {
       height: 300px;
+      padding: 0;
+      margin: 0 7%;
+    }
+
+    @media (min-width: 1100px) {
+      height: 400px;
       padding: 0;
     }
   }
 
   & .new-design {
     height: 100%;
-    padding: 0 15% 5% 5%;
+
     @media (max-width: 800px) {
       text-align: center;
-      padding: 5%;
+      margin: 2% 10%;
     }
     @media (min-width: 800px) {
-      padding: 0% 10%;
+      padding: 0 8% 0 0;
     }
   }
 }
 
+.name{
+  color: white;
+  font-size: 1.2em;
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+
+.profession{
+  font-size: 0.8em;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
 .section-5 {
+
+  & .marg{
+    @media (min-width: 800px) {
+      margin: 0 5%;
+    }
+
+    margin: 5% 5%;
+  }
+
   background-image: url("../images/bg_clients.png");
   background-size: cover;
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     height: 650px;
   }
   background-position: center;
 
   & .container-row {
+
+    margin: 0;
     padding: 0 50px;
+
     @media (min-width: 800px) {
+      margin: 2% 7%;
       padding: 0;
+    }
+  }
+
+  & .logos{
+    img{
+      margin: 0 30px;
     }
   }
 }
@@ -279,6 +361,7 @@ body {
 
 .section-6 {
   background: #f6f5f3;
+  padding: 5% 0 0 0;
 
   & .marg {
     padding: 0 15%;
@@ -389,10 +472,16 @@ body {
   grid-template-columns: 3fr 2fr 2fr 2fr;
   grid-column-gap: 50px;
   padding: 40px 150px 40px 30px;
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 30px;
+
+  }
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
     grid-row-gap: 30px;
   }
+
 
   &:before {
     position: absolute;
@@ -460,4 +549,12 @@ body {
 
   width: 100%;
   display: flex;
+}
+
+button:hover{
+  opacity: 0.9;
+}
+
+a{
+  text-decoration: none;
 }

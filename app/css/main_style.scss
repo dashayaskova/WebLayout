@@ -29,6 +29,15 @@ body {
 }
 
 .section {
+  padding: 30px 10px;
+
+  @media (min-width: 600px) {
+    padding: 30px 70px;
+  }
+
+  @media (min-width: 800px) {
+    padding: 0 100px;
+  }
 
   & .container-row {
     flex-wrap: wrap;
@@ -122,6 +131,10 @@ body {
   }
 }
 
+.no-wrap{
+  white-space: nowrap;
+}
+
 .pad {
   padding: 0 15% 0 5%;
   @media (min-width: 600px) {
@@ -196,12 +209,6 @@ body {
 }
 
 .section-3 {
-  & .headers{
-    @media (min-width: 800px) {
-      margin: 0 7%;
-    }
-    margin: 0;
-  }
 
   .pink{
     margin: 10px 0 2px 0;
@@ -214,39 +221,19 @@ body {
     height: 650px;
   }
 
-  & .container-row {
-    padding: 0 50px;
-    @media (min-width: 600px) {
-      padding: 0;
-    }
-  }
-
   & .mid-header {
     text-align: center;
   }
-
-  & .marg{
-    @media (min-width: 800px) {
-      margin: 0 5%;
-    }
-
-    margin: 5% 10%;
-  }
 }
 
-.mobile-padding {
-  @media (max-width: 800px) {
-    padding: 10% 0;
-  }
-}
 
 .section-4 {
-
   position: relative;
 
   @media (min-width: 800px) {
     height: 650px;
   }
+
   @media (max-width: 800px) {
     flex-wrap: wrap-reverse;
   }
@@ -276,31 +263,24 @@ body {
 
     @media (min-width: 800px) {
       height: 200px;
-      padding: 0;
-      margin: 0 7%;
     }
 
     @media (min-width: 900px) {
       height: 300px;
-      padding: 0;
-      margin: 0 7%;
     }
 
     @media (min-width: 1100px) {
       height: 400px;
-      padding: 0;
     }
   }
 
   & .new-design {
     height: 100%;
+    padding: 0 70px;
 
     @media (max-width: 800px) {
       text-align: center;
-      margin: 2% 10%;
-    }
-    @media (min-width: 800px) {
-      padding: 0 8% 0 0;
+      padding: 0 20px;
     }
   }
 }
@@ -320,14 +300,6 @@ body {
 
 .section-5 {
 
-  & .marg{
-    @media (min-width: 800px) {
-      margin: 0 5%;
-    }
-
-    margin: 5% 5%;
-  }
-
   background-image: url("../images/bg_clients.png");
   background-size: cover;
   @media (min-width: 800px) {
@@ -335,16 +307,6 @@ body {
   }
   background-position: center;
 
-  & .container-row {
-
-    margin: 0;
-    padding: 0 50px;
-
-    @media (min-width: 800px) {
-      margin: 2% 7%;
-      padding: 0;
-    }
-  }
 
   & .logos{
     margin: 10px;
@@ -384,11 +346,15 @@ body {
   padding: 5% 0 0 0;
 
   & .marg {
-    padding: 0 15%;
+    padding: 0 3%;
+    @media (min-width: 800px) {
+      padding: 0 10%;
+    }
   }
 
   & .mid-header {
     padding: 0 0 1% 0;
+    text-align: center;
   }
 
   & img {
@@ -407,7 +373,7 @@ body {
   grid-template-columns: 1fr;
   grid-row-gap: 30px;
 
-  @media (min-width: 800px) {
+  @media (min-width: 1000px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 30px;
@@ -419,7 +385,7 @@ body {
   background-image: url("../images/blue-background.png");
   background-size: cover;
   background-position: center;
-  padding: 75px;
+  padding: 75px 100px;
   grid-auto-flow: row;
   @media (max-width: 600px) {
     padding: 25px;
@@ -432,7 +398,7 @@ body {
   }
 
   & img {
-    @media (min-width: 800px) {
+    @media (min-width: 1000px) {
       grid-row-start: 1;
       grid-row-end: 1;
       grid-column-start: 4;
@@ -444,34 +410,51 @@ body {
     padding: 10px;
     margin: -20px 0 0 0;
     outline: none;
-    @media (min-width: 800px) {
+
+    @media (min-width: 1000px) {
       grid-row-start: 2;
       grid-row-end: 2;
       padding: 0;
       margin: 0;
       height: 95%;
-      width: 90%;
+      width: 80%;
     }
   }
 
   & input {
+    padding-left: 10px;
     background-color: #464c77;
-    width: 100%;
     height: 100%;
     border: 1px solid #ccc;
+    width: 250px;
     margin: 10px;
     color: white;
     outline: none;
     font-family: "Exo medium", sans-serif;
-    @media (min-width: 800px) {
+
+    @media (min-width: 1000px) {
       grid-row-start: 2;
       grid-row-end: 2;
       height: 90%;
     }
+
+    @media (max-width: 1200px) {
+      width: 200px;
+    }
+
+    @media (max-width: 1100px) {
+      width: 150px;
+    }
+
+    @media (max-width: 1000px) {
+      width: 250px;
+    }
+
   }
 
   & .mid-header {
     color: white;
+    text-align: center;
     @media (max-width: 600px) {
       font-size: 1.3em;
       text-align: center;
@@ -497,8 +480,11 @@ body {
   display: grid;
   grid-template-columns: 3fr 2fr 2fr 3fr;
   grid-column-gap: 50px;
-  padding: 40px 150px 40px 150px;
+  padding: 40px 300px 40px 150px;
 
+  @media (max-width: 1000px) {
+    padding: 40px 100px 40px 100px;
+  }
   @media (max-width: 800px) {
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 30px;
